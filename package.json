@@ -1,0 +1,61 @@
+{
+  "name": "pomodoro-app",
+  "description": "My solution to the Frontend Mentor Challenge - Pomodoro App (https://www.frontendmentor.io/challenges/pomodoro-app-KBFnycJ6G)",
+  "author": {
+    "name": "Jadurani Davalos",
+    "email": "jadurani.davalos@gmail.com",
+    "url": "https://jadurani.me"
+  },
+  "engines": {
+    "node": ">=v18.x",
+    "npm": ">=8.x",
+    "yarn": "use-npm-for-now"
+  },
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "prettier": "prettier --write .",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@types/node": "18.15.3",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@storybook/addon-essentials": "^7.0.0-rc.4",
+    "@storybook/addon-interactions": "^7.0.0-rc.4",
+    "@storybook/addon-links": "^7.0.0-rc.4",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/blocks": "^7.0.0-rc.4",
+    "@storybook/nextjs": "^7.0.0-rc.4",
+    "@storybook/react": "^7.0.0-rc.4",
+    "@storybook/testing-library": "^0.0.14-next.1",
+    "autoprefixer": "^10.4.14",
+    "eslint-plugin-storybook": "^0.6.11",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
+    "storybook": "^7.0.0-rc.4",
+    "storybook-css-modules-preset": "^1.1.1",
+    "tailwindcss": "^3.2.7"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}

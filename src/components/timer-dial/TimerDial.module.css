@@ -1,0 +1,30 @@
+.timer {
+  margin-top: 10px;
+  height: 366px;
+  width: 366px;
+  background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+  box-shadow: 50px 50px 100px 0px #121530, -50px -50px 100px 0px #272c5a;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.countdown {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 10;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  stroke-linecap: round;
+  stroke-opacity: 1;
+  transition: stroke-dashoffset 0.2s ease;
+}
+
+.countdownText {
+  font-size: 4rem;
+  fill: #d7e0ff;
+  display: inline-block;
+  transform: translateY(1rem);
+}
