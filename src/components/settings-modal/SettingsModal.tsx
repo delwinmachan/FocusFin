@@ -1,4 +1,4 @@
-import ThemeContext from "@/state/theme/ThemeContext";
+import ThemeContext, { ThemeColors } from "@/state/theme/ThemeContext";
 import TimerContext from "@/state/timer/TimerContext";
 import { useContext, useEffect, useState } from "react";
 import ColorSelector from "../color-selector/ColorSelector";
@@ -10,7 +10,7 @@ import AudioUploader from "../audio-selector/AudioUploader";
 export interface ISettingsModal {
   isOpen: boolean;
   setIsOpen: (v: boolean) => void;
-  selectedTabState: boolean;
+  selectedTabState: string;
   trainMode: (v: boolean) => void;
 }
 
@@ -32,11 +32,10 @@ const SettingsModal: React.FC<ISettingsModal> = ({
   const unselectedClasses = "bg-grey1 text-opacity-75";
 
   useEffect(() => {
-    console.log(selectedTabState, !isSelected, "name");
     if (selectedTabState === "pomodoro") {
-      setColor("red");
+      setColor(ThemeColors.RED);
     } else {
-      setColor("teal");
+      setColor(ThemeColors.TEAL);
     }
   }, [selectedTabState]);
   const handleClose = (doSave: boolean) => {

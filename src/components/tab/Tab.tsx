@@ -7,7 +7,6 @@ export interface ITab {
   text: string;
   id: TimerVariants;
   isSelected: boolean;
-  resumeFlag: boolean;
   selectTab: (id: TimerVariants) => void;
 }
 
@@ -15,7 +14,6 @@ const Tab: React.FC<ITab> = ({
   text,
   id,
   isSelected,
-  resumeFlag,
   selectTab,
 }) => {
   const { color } = useContext(ThemeContext);

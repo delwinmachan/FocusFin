@@ -7,26 +7,32 @@ const shortBreak: ITab = {
   text: "short break",
   id: TimerVariants.SHORT,
   isSelected: false,
-  selectTab: (id: TimerVariants) => undefined,
+  selectTab(selected: TimerVariants): void {
+    this.isSelected = (selected === this.id);
+  }
 };
 
 interface TabBarProps {
   resumeFlag: Number;
-  selectedTab: (selected: TimerVariants) => undefined;
+  selectedTab: (selected: TimerVariants) => void;
 }
 
 const longBreak: ITab = {
   text: "long break",
   id: TimerVariants.LONG,
   isSelected: false,
-  selectTab: (id: TimerVariants) => undefined,
+  selectTab(selected: TimerVariants): void {
+    this.isSelected = (selected === this.id);
+  }
 };
 
 const pomodoro: ITab = {
   text: "pomodoro",
   id: TimerVariants.POMODORO,
   isSelected: false,
-  selectTab: (id: TimerVariants) => undefined,
+  selectTab(selected: TimerVariants): void {
+    this.isSelected = (selected === this.id);
+  }
 };
 
 const defaultTabList = [pomodoro, shortBreak, longBreak];
@@ -86,7 +92,6 @@ const TabBar: React.FC<TabBarProps> = ({ resumeFlag, selectedTab }) => {
           text={tab.text}
           isSelected={tab.id === activeTimer}
           selectTab={handleSelect}
-          resumeFlag={resumeFlag}
         />
       ))}
     </div>

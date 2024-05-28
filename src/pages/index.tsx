@@ -7,7 +7,6 @@ import { useContext, useState } from "react";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [firstRender, setFirstRender] = useState(false);
   const [resumeFlag, setResumeFlag] = useState(0);
   const [trainMode, setTrainMode] = useState(false);
   const [selectedTabState, setselectedTabState] = useState<TimerVariants>(TimerVariants.POMODORO);
